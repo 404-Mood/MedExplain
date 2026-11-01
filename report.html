@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Report Explainer - MedExplain</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <span class="emergency-icon">&#9888;</span>
+        <span><strong>Emergency?</strong> Call <strong>112</strong> (India) or visit your nearest emergency department immediately. MedExplain is for educational purposes only and does not provide medical diagnosis or treatment.</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo-icon">M</div>
+            <span class="logo-text">MedExplain</span>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="report.html" class="nav-link active">Medical Report</a></li>
+            <li><a href="doctors.html" class="nav-link">Find a Doctor</a></li>
+        </ul>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>Medical Report Explainer</span>
+    </div>
+
+    <!-- Report Main -->
+    <main class="report-main">
+        <div class="section-header report-header">
+            <h1>Medical Report Explainer</h1>
+            <p>Select a sample report to test the upload interface. Automatic text extraction and report explanations are not connected yet. <strong>This is not a diagnosis tool.</strong></p>
+        </div>
+
+        <!-- Upload Area -->
+        <div class="upload-container" id="uploadContainer">
+            <div class="upload-area" id="uploadArea">
+                <div class="upload-icon">&#128194;</div>
+                <h3>Upload Medical Report</h3>
+                <p>Drag and drop a PDF or image file, or click to browse</p>
+                <input type="file" id="fileInput" accept=".pdf,.jpg,.jpeg,.png" hidden>
+                <button class="btn btn-primary" id="browseBtn">Choose File</button>
+                <p class="upload-formats">Supported formats: PDF, JPG, JPEG, PNG</p>
+            </div>
+        </div>
+
+        <!-- File Selected State -->
+        <div class="file-selected" id="fileSelected" style="display: none;">
+            <div class="file-info">
+                <div class="file-icon">&#128196;</div>
+                <div class="file-details">
+                    <p class="file-name" id="fileName"></p>
+                    <p class="file-size" id="fileSize"></p>
+                </div>
+            </div>
+            <div class="file-actions">
+                <button class="btn btn-secondary" id="removeFileBtn">Remove</button>
+                <button class="btn btn-primary" id="processBtn">Process Report</button>
+            </div>
+        </div>
+
+        <!-- Processing State -->
+        <div class="processing-state" id="processingState" style="display: none;">
+            <div class="spinner"></div>
+            <h3>Processing Report...</h3>
+            <p id="processingText">Reading file contents...</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <!-- Integration Pending State -->
+        <div class="pending-state" id="pendingState" style="display: none;">
+            <div class="pending-icon">&#128295;</div>
+            <h3>Analysis Integration Pending</h3>
+            <p>The file was selected in your browser, but it has NOT been uploaded to a server, read, extracted or analysed. Automated report analysis requires a secure backend integration that is not yet connected.</p>
+            <div class="pending-details">
+                <h4>What must be connected before analysis can work:</h4>
+                <ul>
+                    <li>OCR or PDF text extraction would read the report contents</li>
+                    <li>Medical terminology would be identified and extracted automatically</li>
+                    <li>Values, units, and reference ranges would be parsed from the document</li>
+                    <li>AI would generate simplified educational explanations for each term</li>
+                    <li>Abnormal values would be flagged for review by a professional</li>
+                    <li>Missing or unreadable sections would be clearly identified</li>
+                </ul>
+            </div>
+            <div class="pending-actions">
+                <button class="btn btn-primary" id="newUploadBtn">Upload Another File</button>
+            </div>
+        </div>
+
+        <!-- Error State -->
+        <div class="error-state" id="errorState" style="display: none;">
+            <div class="error-icon">&#10060;</div>
+            <h3>Processing Error</h3>
+            <p id="errorMessage">Something went wrong while processing your file.</p>
+            <button class="btn btn-primary" id="errorRetryBtn">Try Again</button>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo-icon footer-logo">M</div>
+                <span>MedExplain</span>
+            </div>
+            <p class="footer-text">Educational healthcare literacy platform. Not a medical service.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="report.html">Medical Report</a>
+                <a href="doctors.html">Find a Doctor</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 MedExplain. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="doctors-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

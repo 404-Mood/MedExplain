@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Doctor - MedExplain</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <span class="emergency-icon">&#9888;</span>
+        <span><strong>Emergency?</strong> Call <strong>112</strong> (India) or visit your nearest emergency department immediately. MedExplain is for educational purposes only and does not provide medical diagnosis or treatment.</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo-icon">M</div>
+            <span class="logo-text">MedExplain</span>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="report.html" class="nav-link">Medical Report</a></li>
+            <li><a href="doctors.html" class="nav-link active">Find a Doctor</a></li>
+        </ul>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <span>Find a Doctor</span>
+    </div>
+
+    <!-- Doctor Directory Main -->
+    <main class="doctors-main">
+        <div class="section-header doctors-header">
+            <h1>Find a Doctor in Lucknow</h1>
+            <p>Search and filter healthcare professionals by specialty. Contact information will be added once verified.</p>
+        </div>
+
+        <!-- Search and Filter -->
+        <div class="search-filter-bar">
+            <div class="search-box">
+                <span class="search-icon">&#128269;</span>
+                <input type="text" class="search-input" id="doctorSearchInput" placeholder="Search by name, specialty, or clinic...">
+            </div>
+            <div class="filter-dropdown">
+                <select class="filter-select" id="categoryFilter">
+                    <option value="all">All Specialties</option>
+                    <option value="Orthopaedics">Orthopaedics (2)</option>
+                    <option value="Dentistry & Oral/Maxillofacial Surgery">Dentistry & Oral/Maxillofacial Surgery (2)</option>
+                    <option value="Pediatrics & Child Health">Pediatrics & Child Health (2)</option>
+                    <option value="Cardiology">Cardiology (3)</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Results Count -->
+        <div class="results-info">
+            <p id="resultsCount">Showing all doctors</p>
+        </div>
+
+        <!-- Doctor Cards Grid -->
+        <div class="doctors-grid" id="doctorsGrid">
+            <!-- Populated by JavaScript -->
+        </div>
+
+        <!-- No Results State -->
+        <div class="no-results" id="noResults" style="display: none;">
+            <div class="no-results-icon">&#128270;</div>
+            <h3>No doctors found</h3>
+            <p>Try adjusting your search or filter criteria.</p>
+            <button class="btn btn-secondary" id="clearFiltersBtn">Clear Filters</button>
+        </div>
+
+        <!-- Directory Disclaimer -->
+        <div class="directory-disclaimer">
+            <div class="disclaimer-box">
+                <h3>&#9888; Important Notice</h3>
+                <p>Doctor listings are provided for discovery purposes and do not constitute an endorsement or guarantee of quality, availability or credentials. All ratings, registration claims and experience details are labelled as source-reported and awaiting independent verification. Please independently verify doctor details, registration, fees and consultation timings before visiting.</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Doctor Profile Modal -->
+    <div class="modal-overlay" id="doctorModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo-icon footer-logo">M</div>
+                <span>MedExplain</span>
+            </div>
+            <p class="footer-text">Educational healthcare literacy platform. Not a medical service.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="report.html">Medical Report</a>
+                <a href="doctors.html">Find a Doctor</a>
+            </div>
+            <p class="footer-copy">&copy; 2025 MedExplain. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="doctors-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

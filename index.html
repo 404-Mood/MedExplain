@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedExplain - Healthcare Education & Doctor Discovery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Emergency Banner -->
+    <div class="emergency-banner">
+        <span class="emergency-icon">&#9888;</span>
+        <span><strong>Emergency?</strong> Call <strong>112</strong> (India) or visit your nearest emergency department immediately. MedExplain is for educational purposes only and does not provide medical diagnosis or treatment.</span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">
+            <div class="logo-icon">M</div>
+            <span class="logo-text">MedExplain</span>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="index.html" class="nav-link active">Home</a></li>
+            <li><a href="report.html" class="nav-link">Medical Report</a></li>
+            <li><a href="doctors.html" class="nav-link">Find a Doctor</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Understand Your Health, Simply</h1>
+            <p class="hero-subtitle">MedExplain helps you understand medical terminology, explore reports in plain language, and discover healthcare professionals in Lucknow. For educational purposes only.</p>
+            <div class="hero-actions">
+                <a href="report.html" class="btn btn-primary">
+                    <span class="btn-icon">&#128196;</span>
+                    Upload Medical Report
+                </a>
+                <a href="doctors.html" class="btn btn-secondary">
+                    <span class="btn-icon">&#128104;&#8205;&#9877;&#65039;</span>
+                    Find a Doctor
+                </a>
+            </div>
+        </div>
+        <div class="hero-illustration">
+            <div class="hero-card">
+                <div class="hero-card-icon">&#127775;</div>
+                <div class="hero-card-text">Educational health insights</div>
+            </div>
+            <div class="hero-card hero-card-offset">
+                <div class="hero-card-icon">&#128218;</div>
+                <div class="hero-card-text">Simplified terminology</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Medical Categories -->
+    <section class="categories-section">
+        <div class="section-header">
+            <h2>Explore Medical Categories</h2>
+            <p>Learn about common medical specialties and terminology</p>
+        </div>
+        <div class="categories-grid" id="categoriesGrid">
+            <!-- Populated by JavaScript -->
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <div class="section-header">
+            <h2>How MedExplain Works</h2>
+            <p>Three simple steps to better health literacy</p>
+        </div>
+        <div class="steps-grid">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Upload or Browse</h3>
+                <p>Upload a medical report or browse our educational categories to learn about medical terms in plain language.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Get Explanations</h3>
+                <p>Browse plain-language medical terminology. Report-specific explanations will be available after a secure analysis backend is connected.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Find Professionals</h3>
+                <p>Search our Lucknow doctor directory to find qualified healthcare providers by specialty, experience, and availability.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Discovery Preview -->
+    <section class="preview-section">
+        <div class="section-header">
+            <h2>Discover Doctors in Lucknow</h2>
+            <p>Browse doctor listings across four specialties. Details are source-reported and awaiting independent verification.</p>
+        </div>
+        <div class="stats-grid" id="statsGrid">
+            <!-- Populated by JavaScript -->
+        </div>
+        <div class="preview-cta">
+            <a href="doctors.html" class="btn btn-primary">View All Doctors</a>
+        </div>
+    </section>
+
+    <!-- Disclaimer Section -->
+    <section class="disclaimer-section">
+        <div class="disclaimer-box">
+            <h3>&#9888; Important Disclaimer</h3>
+            <p>MedExplain is an <strong>educational and informational platform</strong>. Doctor listings are provided for discovery purposes and do not constitute an endorsement or guarantee of quality, availability or credentials. Please independently verify doctor details, registration, fees and consultation timings before visiting.</p>
+            <p style="margin-top: 10px;">MedExplain does not provide medical diagnoses or prescribe treatments. AI-generated explanations are educational and must not replace advice from a qualified healthcare professional.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="logo-icon footer-logo">M</div>
+                <span>MedExplain</span>
+            </div>
+            <p class="footer-text">Educational healthcare literacy platform. Not a medical service.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="report.html">Medical Report</a>
+                <a href="doctors.html">Find a Doctor</a>
+            </div>
+            <p class="footer-copy">&copy; 2026 MedExplain. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="doctors-data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
